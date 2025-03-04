@@ -4,7 +4,7 @@ from openai import OpenAI
 # Initialize the OpenAI client with OpenRouter
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
-    api_key=st.secrets["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"],  # Use Streamlit secrets for API key
+    api_key=st.secrets["OPENROUTER_API_KEY"],  # Use Streamlit secrets for API key
 )
 
 # Streamlit app
