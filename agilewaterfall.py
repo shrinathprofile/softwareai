@@ -4,9 +4,9 @@ from openai import OpenAI
 # Initialize the OpenAI client with OpenRouter
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
-    api_key=st.secrets["openrouter_api_key"],  # Use Streamlit secrets for API key
+    api_key=os.getenv["openrouter_api_key"],  # Use Streamlit secrets for API key
 )
-
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 # Streamlit app
 st.title("Software Development Query AI")
 
